@@ -1,8 +1,5 @@
-//! #TASK 2 ------------------------: შეამოწმეთ მოცელუმ მასივში let arr = [-1, -2, -3, 4]; 
-const numbersArray = [-1, -2, -3, 4];
+let words = ['Madrid', 'Rome', 'Milan', 'Berlin'];
 
-// ? არის თუ არა ერთი მაინც დადებითი რიცხვი some მეთიდით.
-const numNeatPositives = numbersArray.some(positiveNum => positiveNum > 0)
+let wordsContains = words.filter(word => /m/i.test(word));
 
-console.log('',numNeatPositives);  
-console.log(numNeatPositives ? "Positive number found!" : "No positive number.");
+console.log('M/m found in words',wordsContains); //^ Output: [ 'Madrid', 'Rome', 'Milan' ]
