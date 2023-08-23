@@ -1,5 +1,6 @@
-let words = ['Madrid', 'Rome', 'Milan', 'Berlin'];
+const numString = '12345';
 
-let wordsContains = words.filter(word => /m/i.test(word));
+const totalNumString = [...numString].reduce((count, num) => count + Number(num), 0);
 
-console.log('M/m found in words',wordsContains); //^ Output: [ 'Madrid', 'Rome', 'Milan' ]
+console.log('Sum:',totalNumString);
+
