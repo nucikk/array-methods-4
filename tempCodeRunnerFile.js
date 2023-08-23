@@ -1,9 +1,12 @@
-const array2 = [14, 150, 'css', null, 'javascript', 25];
+const programName = 'javascript';
 
+function turnBack(namespace) {
+    let reverseName = "";
+    for (let i = namespace.length - 1; i >= 0; i--) {
+        reverseName += namespace.charAt(i);
+    }
+    return reverseName
+}
 
-const existingArray = array2.map(e => 
-    typeof e === 'number' ? e ** 2 :
-    typeof e === 'string' ? e.toUpperCase() : e
-    )
-
-console.log(existingArray);
+const turnedBack = turnBack(programName)
+console.log(turnedBack); //tpircsavaj
