@@ -1,3 +1,5 @@
+const { type } = require("jquery");
+
 //! #TASK 1 ------------------------:მოცემულია მასივი: let languages = ['html', 'css', 'javascript', ‘python’, 'php'];
 const programLanguage = ['html', 'css', 'javascript', 'python', 'php'];
 
@@ -6,7 +8,7 @@ const lengthLanguage = programLanguage.filter(quantity => quantity.length > 3)
 
 console.log('3-ზე მეტი სიბოლოების რაოდენობის არის',lengthLanguage); //^ Output: 3-ზე მეტი სიბოლოების რაოდენობის არის ['html', 'javascript', 'python' ]
 
-//! #TASK 2 ------------------------:შეამოწმეთ მოცემულ მასივში let arr = [-1, -2, -3, 4]; 
+//! #TASK 2 ------------------------:შეამოწმეთ მოცემულ მასივში A 
 const numbersArray = [-1, -2, -3, 4];
 
 //? არის თუ არა ერთი მაინც დადებითი რიცხვი some მეთიდით.
@@ -36,10 +38,23 @@ const totalOfDigits = [...numString].reduce((count, num) => count + Number(num),
 console.log('Sum:',totalOfDigits); //^ Output: Sum: 15
 
 //! #TASK 6 ------------------------:მოცემულია მასივი, შემდეგი მნიშვნელობებით - let array = ['html', 100, 'css', 'javascript', 25, 10, 'python', 11];
-let array = ['html', 100, 'css', 'javascript', 25, 10, 'python', 11];
+const array = ['html', 100, 'css', 'javascript', 25, 10, 'python', 11];
 
 //? გამოიტანეთ მარტო ციფრები
 const filterOfNumber = array.filter(num => typeof num === 'number')
 
 console.log('Filter numbers from array: ',filterOfNumber); //^Output: Filter numbers from array:  [ 100, 25, 10, 11 ]
  
+//! #TASK 7 ------------------------:მოცემულია მასიცი:let array2 = [14, 150, 'css', null, 'javascript', 25];
+//!შექმენით ახალი მასივი map ფუნქციის საშუალებით შემდეგი ლოგიკით: თუ ელემენტი არის რიცხვი ამ მასივში უნდა იყოს ამ რიცხვის კვადრატი. 
+//!თუ ელემენტი არის სტირნგი, მაშინ ახალ მასივში უნდა იყოს ეს ტექსტი დიდი ასოებით. სხვა შემთხვევაში ელემენტი უნდა დაემატოს უცვლელად.
+
+const array2 = [14, 150, 'css', null, 'javascript', 25];
+
+
+const existingArray = array2.map(e => 
+    typeof e === 'number' ? e ** 2 :
+    typeof e === 'string' ? e.toUpperCase() : e
+    )
+
+console.log(existingArray);//^Output: [ 196, 22500, 'CSS', null, 'JAVASCRIPT', 625 ]

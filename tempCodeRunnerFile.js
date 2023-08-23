@@ -1,7 +1,9 @@
-//! #TASK 6 ------------------------:მოცემულია მასივი, შემდეგი მნიშვნელობებით - let array = ['html', 100, 'css', 'javascript', 25, 10, 'python', 11];
-let array = ['html', 100, 'css', 'javascript', 25, 10, 'python', 11];
+const array2 = [14, 150, 'css', null, 'javascript', 25];
 
-//? გამოიტანეთ მარტო ციფრები
-const filterOfNumber = array.filter(num => typeof num === 'number')
 
-console.log('Filter numbers from array: ',filterOfNumber); 
+const existingArray = array2.map(e => 
+    typeof e === 'number' ? e ** 2 :
+    typeof e === 'string' ? e.toUpperCase() : e
+    )
+
+console.log(existingArray);
