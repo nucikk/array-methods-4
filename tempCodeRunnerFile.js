@@ -1,6 +1,8 @@
-const programLanguage = ['html', 'css', 'javascript', 'python', 'php'];
+//! #TASK 2 ------------------------: შეამოწმეთ მოცელუმ მასივში let arr = [-1, -2, -3, 4]; 
+const numbersArray = [-1, -2, -3, 4];
 
-//? ფილტრის საშულებით გაფილტრეთ და გამოიტანეთ მარტო ის სიტყვები რომლების სიმბოლოების რაოდენობა იქნება 3-ზე მეტი;
-const lengthLanguage = programLanguage.filter(quantity => quantity.length > 3)
+// ? არის თუ არა ერთი მაინც დადებითი რიცხვი some მეთიდით.
+const numNeatPositives = numbersArray.some(positiveNum => positiveNum > 0)
 
-console.log('3-ზე მეტი სიბოლოების რაოდენობის არის',lengthLanguage); 
+console.log('',numNeatPositives);  
+console.log(numNeatPositives ? "Positive number found!" : "No positive number.");
