@@ -1,8 +1,11 @@
 
-function randomstring(itemName) {
-    return itemName.length
-} 
+const question = prompt("საქართველოს დედაქალაქი?");
 
-const greetingsText = "Welcome to the javascript game"
-const lenghtTextGreetings = randomstring(greetingsText)
-console.log('greetingsText Length:', lenghtTextGreetings);
+const isAnswerGe = "თბილისი";
+const isAnswerEn = "tbilisi";
+
+const cityNameLowercase = question.toLowerCase();
+
+const isCorrectAnswer = cityNameLowercase === isAnswerGe || isAnswerEn;
+
+console.log(isCorrectAnswer);

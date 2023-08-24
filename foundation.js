@@ -1,4 +1,3 @@
-const { type } = require("jquery");
 
 //! #TASK 1 ------------------------:მოცემულია მასივი: let languages = ['html', 'css', 'javascript', ‘python’, 'php'];
 const programLanguage = ['html', 'css', 'javascript', 'python', 'php'];
@@ -94,4 +93,18 @@ function randomstring(itemName) {
 const greetingsText = "Welcome to the javascript game"
 const lenghtTextGreetings = randomstring(greetingsText)
 console.log('greetingsText Length:', lenghtTextGreetings); //^ greetingsText Length: 30
+
+
+//! #TASK 11 ------------------------:Prompt ფუნქციის საშუალებით კითხეთ მომხმარებელს შემდეგი კითხვა: საქართველოს დედაქალაქი?
+//? სწორი პასუხი ჩაწერეთ პატარა ასობიეთ და  შეინახეთ ცვლადში. როდესაც მიიღებთ პასუხს მომხმარებლისგან, 
+
+const question = prompt("სქართველოს დედაქალაქი?");
+
+const correctAnswers = ["თბილისი","tbilisi"]; 
+
+const cityNameLowercase = question.toLowerCase();   //? გადაიყვანეთ ეს პასუხი პატარა ასოებად და შეადარეთ სწორ პასუხს.
+const isCorrectAnswer = correctAnswers.includes(cityNameLowercase); //? თუ მომხმარებლის პასუხი სწორია, დაბეჭდეთ სწორია, თუ არა მაშინ დაბეჭდეთ არასწორია.
+
+console.log(isCorrectAnswer); 
+
 
