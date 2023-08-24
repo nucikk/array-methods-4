@@ -79,9 +79,19 @@ console.log(turnedBack); //tpircsavaj
 
 let info= "Good day"
 
-let removeInfoWord = info.slice(5); // Remove 'day'
-let newInfo = info.slice(0, info) + info.slice(info + 3); //Add 'Good day'
+let removeInfoWord = info.slice(5); //* Remove 'day'
+let newInfo = info.slice(0, info) + info.slice(info + 3); //* Add 'Good day'
 
 console.log('Removed:',removeInfoWord);   //^Output - Removed: day
 console.log('Updated:',newInfo);         //^Output - Updated: Good day
+
+//! #TASK 10 ------------------------:დაწერეთ ფუნქცია, რომელიც პარამეტრსდ იღებს სტრინგს, და დააბრუნებს ჩაწერილი სტრინგის სიგრძეს.
+
+function randomstring(itemName) {
+    return itemName.length
+} 
+
+const greetingsText = "Welcome to the javascript game"
+const lenghtTextGreetings = randomstring(greetingsText)
+console.log('greetingsText Length:', lenghtTextGreetings); //^ greetingsText Length: 30
 
