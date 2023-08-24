@@ -115,6 +115,14 @@ console.log(isCorrectAnswer);
 const linkChecked = "https://google.com";
 
 const linkIncludeCheck = link => link.indexOf('https://') !== -1;
-
-
 console.log(linkIncludeCheck(linkChecked) ? "კი მოიცავს" : "არა, არ მოიცავს"); //^Output - კი მოიცავს
+
+
+//! #TASK 13 ------------------------:მოცემულია მასივი,  მაგ: let fruits = [“apple”, “mango”, “avocado”,”kiwi”]  რომელშიც არის ერთზე მეტი მნიშვნელობა, მაგრამ კონკრეტულად რამდენი არ ვიცით, შეიძლება 100 ან 200 ან 10. 
+//!splice მეთოდის საშუალებით წაშალეთ ბოლოს წინა მნიშვნელობა და მაგის მავივრად ჩასვით “strawberry”
+
+let fruits = ["apple", "mango", "avocado", "kiwi"];
+
+fruits.splice(fruits.length - 2, 1, 'strawberry');//? splice მეთოდის საშუალებით წაშალეთ ბოლოს წინა მნიშვნელობა და მაგის მავივრად ჩასვით “strawberry”. 
+console.log('updated fruits:',fruits); //^Output - updated fruits: [ 'apple', 'mango', 'strawberry', 'kiwi' ]
+
