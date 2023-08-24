@@ -92,7 +92,7 @@ function randomstring(itemName) {
 
 const greetingsText = "Welcome to the javascript game"
 const lenghtTextGreetings = randomstring(greetingsText)
-console.log('greetingsText Length:', lenghtTextGreetings); //^ greetingsText Length: 30
+console.log('greetingsText Length:', lenghtTextGreetings); //^Output - greetingsText Length: 30
 
 
 //! #TASK 11 ------------------------:Prompt ფუნქციის საშუალებით კითხეთ მომხმარებელს შემდეგი კითხვა: საქართველოს დედაქალაქი?
@@ -108,3 +108,13 @@ const isCorrectAnswer = correctAnswers.includes(cityNameLowercase); //? თუ �
 console.log(isCorrectAnswer); 
 
 
+//! #TASK 12 ------------------------:მოცემულია: let link = “https://google.com”. 
+//? დაწერეთ ფუნქცია, რომელიც პარამეტრად იღებს ამ ცვლადს, და შეამოწმეთ indexof მეთოდის საშუალებით არის თუ არა ამ ცვლადში “https://“. 
+//? თუ კი გამოიტანეთ - კი მოიცავს, თუ არა - არა, არ მოიცავს.
+
+const linkChecked = "https://google.com";
+
+const linkIncludeCheck = link => link.indexOf('https://') !== -1;
+
+
+console.log(linkIncludeCheck(linkChecked) ? "კი მოიცავს" : "არა, არ მოიცავს"); //^Output - კი მოიცავს

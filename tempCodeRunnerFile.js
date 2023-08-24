@@ -1,11 +1,6 @@
+const linkChecked = "https://google.com";
 
-const question = prompt("საქართველოს დედაქალაქი?");
+const linkIncludeCheck = link => link.indexOf('https://') !== -1;
 
-const isAnswerGe = "თბილისი";
-const isAnswerEn = "tbilisi";
 
-const cityNameLowercase = question.toLowerCase();
-
-const isCorrectAnswer = cityNameLowercase === isAnswerGe || isAnswerEn;
-
-console.log(isCorrectAnswer);
+console.log(linkIncludeCheck(linkChecked) ? "კი მოიცავს" : "არა, არ მოიცავს"); //^Output - კი მოიცავს
