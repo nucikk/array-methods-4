@@ -75,3 +75,13 @@ function turnBack(namespace) {
 const turnedBack = turnBack(programName)
 console.log(turnedBack); //tpircsavaj
 
+//! #TASK 9 ------------------------:მოცემულია სტრინგი: let info= ‘Good day”, ამოიღეთ სიტყვა day და ჩასვით ახალ ცვლადში slice მეთოდის საშუელებით
+
+let info= "Good day"
+
+let removeInfoWord = info.slice(5); // Remove 'day'
+let newInfo = info.slice(0, info) + info.slice(info + 3); //Add 'Good day'
+
+console.log('Removed:',removeInfoWord);   //^Output - Removed: day
+console.log('Updated:',newInfo);         //^Output - Updated: Good day
+
