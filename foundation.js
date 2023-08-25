@@ -26,6 +26,28 @@ console.log('M/m found in words',wordsContains); //^ Output: M/m found in words 
 //! #TASK 4 ------------------------:შექმენით htmlში დივი, მიანიჭეთ id და ჯსდან ამ დივში დაამატეთ შემდეგი html სტრუქტურა:
 {/* <div class=“wraper”> <img src=“რაღაცა სურათის მისამართი დაამატეთ” alt=“image”> <h2 class=“title”> image title </h2> </div> */}
 
+const containerDivElement = document.getElementById('conatiner'); //* html-ში გაწერილი მშობელი ელემენტი
+
+//* მშობელი ელემენტის შექმნა დინამიურად & კლასის დამატება
+const wrapperDivElement = document.createElement('div');
+wrapperDivElement.classList.add("wraper")
+
+//* ფოტოს ტეგის შექმნა: scr & alt ატრიბუტით
+const imageElement = document.createElement('img')
+imageElement.src = "https://i.pinimg.com/564x/9d/2b/04/9d2b04a381fe509b5f19f26dba6b1d1c.jpg"
+imageElement.alt = "code image"
+
+//* სათაურის ტეგის შექმნა: კლასის & კონტენტის დამატება
+const titleElement = document.createElement("h2")
+titleElement.classList.add("title")
+titleElement.textContent = "image title"
+
+//* wrapperDivElement-ს დაემატა img & h2 ტეგი
+wrapperDivElement.appendChild(imageElement)
+wrapperDivElement.appendChild(titleElement)
+
+containerDivElement.appendChild(wrapperDivElement) //* containerDivElement-ს დაემატა wrapperDivElement რადგან გამოჩნდეს კონტენტი
+
 
 //! #TASK 5 ------------------------:მოცემულია სტრინგი - ‘12345’, გაიგეთ ამ რიცხვებსის ჯამი. 
 //! ( უნდა გადაიყავნოთ მასივში, გათვალოთ ჯამი, და შემდგ ეს სტრინგი გადაიყავნოთ რიცხვში)
@@ -57,7 +79,6 @@ const existingArray = array2.map(e =>
     )
 
 console.log(existingArray);//^Output: [ 196, 22500, 'CSS', null, 'JAVASCRIPT', 625 ]
-
 
 //! #TASK 8 ------------------------:მოცემულია სტრინგი - ‘javascript’, მიიღეთ შემოტრიალებული ვარიანტი მეთოდების გარეშე ( for loop ით)
 
@@ -125,4 +146,3 @@ let fruits = ["apple", "mango", "avocado", "kiwi"];
 
 fruits.splice(fruits.length - 2, 1, 'strawberry');//? splice მეთოდის საშუალებით წაშალეთ ბოლოს წინა მნიშვნელობა და მაგის მავივრად ჩასვით “strawberry”. 
 console.log('updated fruits:',fruits); //^Output - updated fruits: [ 'apple', 'mango', 'strawberry', 'kiwi' ]
-
